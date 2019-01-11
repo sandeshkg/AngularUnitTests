@@ -1,0 +1,19 @@
+[
+    {
+        "Id":1,
+        "Name":"John Smith",
+        "Age":"32",
+        "Mobile":"6432678943",
+        "Category":"Home Loan",
+        "CreditRating":"4"
+    },
+    {
+        "Id":2,
+        "Name":"Jane Welch",
+        "Age":"42",
+        "Mobile":"6439876783",
+        "Category":"Personal Loan",
+        "CreditRating":"5"
+    }
+
+]

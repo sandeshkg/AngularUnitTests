@@ -1,0 +1,42 @@
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">Filter</div>
+            <div class="col-md-4">
+                <input type="text" [(ngModel)]="filter"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Filtered By {{filter}}</h4>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>                        
+                        <th>Name</th>
+                        <th>Mobile No</th>
+                        <th>Age</th>
+                        <th>Category</th>
+                        <th>Credit Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let prospect of _filteredLeads'>
+                        <th><a class="nav-link" [routerLink]="['/leads', prospect.Id]">{{prospect.Name}}</a></th>
+                        <th>{{prospect.Mobile | mobileNumberFormatter}} </th>
+                        <th>{{prospect.Age}}</th>
+                        <th>{{prospect.Category}}</th>
+                        <th>{{prospect.CreditRating}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</div>
